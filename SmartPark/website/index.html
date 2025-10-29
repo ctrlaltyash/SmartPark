@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SmartPark Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+  Available Slots: <span id="available-count">4</span>
+</div>
+
+<div class="parking-lot">
+  <!-- Parking map -->
+  <img src="assets/parking-slot.png" class="map-bg" alt="Parking Map">
+
+  <!-- SVG overlay for paths -->
+  <svg class="paths" width="1715" height="980">
+    <!-- Slot 1 path -->
+    <path id="slot1Path" d="M1715,900 L836,866 L836,647" stroke="transparent" fill="none"/>
+    <!-- Slot 2 path -->
+    <path id="slot2Path" d="M1715,900 L361,866 L361,647" stroke="transparent" fill="none"/>
+    <!-- Slot 3 path -->
+    <path id="slot3Path" d="M1715,900 L1282,900 L1300,100 L1070,100 L1070,360" stroke="transparent" fill="none"/>
+    <!-- Slot 4 path -->
+    <path id="slot4Path" d="M1715,900 L1282,900 L1300,100 L600,100 L600,360" stroke="transparent" fill="none"/>
+  </svg>
+
+  <!-- Car -->
+  <img src="assets/car.png" class="car" id="car">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

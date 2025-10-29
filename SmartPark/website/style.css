@@ -1,0 +1,79 @@
+/* === GLOBAL STYLES === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif; /* futuristic font */
+  background-color: #0d0d0d;           /* dark space-like background */
+  color: #00eaff;                      /* neon cyan text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* === DASHBOARD === */
+.dashboard {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+/* === PARKING LOT CONTAINER === */
+.parking-lot {
+  position: relative;       /* essential for car animation */
+  width: 1715px;            /* match map image dimensions */
+  height: 980px;
+  overflow: hidden;         /* prevent car flying outside */
+  border: 2px solid #00eaff;
+  border-radius: 10px;
+  box-shadow: 0 0 50px #00eaff;
+  background-color: #111;   /* fallback background */
+}
+
+/* === MAP IMAGE === */
+.map-bg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.parking-lot {
+  position: relative;
+  width: 1715px;
+  height: 980px;
+  overflow: hidden;
+}
+
+.car {
+  position: absolute;    /* required */
+  width: 200px;
+  height: auto;
+  top: 0;
+  left: 0;
+  transform-origin: center center;
+  z-index: 10;
+}
+
+
+
+
+/* === OPTIONAL GLOW ANIMATION FOR CAR === */
+@keyframes carGlow {
+  0%   { filter: drop-shadow(0 0 10px #00eaff); }
+  50%  { filter: drop-shadow(0 0 25px #00eaff); }
+  100% { filter: drop-shadow(0 0 10px #00eaff); }
+}
+
+.car.glow {
+  animation: carGlow 2s infinite alternate;
+}
+
+/* === RESPONSIVE NOTE (Optional) === */
+@media (max-width: 1800px) {
+  .parking-lot {
+    transform: scale(0.9);
+    transform-origin: top left;
+  }
+}
